@@ -16,8 +16,8 @@ AddRecord(){
 		echo "		Class Rank: "
 		
 		
-		tput cup 9 27
-		read fName
+		tput cup 9 27			# tput cup is used to move the cursor
+		read fName			# position through the options in the menu.
 		
 		tput cup 10 27
 		read lName
@@ -41,7 +41,7 @@ AddRecord(){
 		read rank 
 		
 		
-		echo "$fName:$lName:$addr:$city:$state:$zip:$telNum:$rank" >> output.txt
+		echo "$fName:$lName:$addr:$city:$state:$zip:$telNum:$rank" >> output.txt	# Save contact to the record. 
 	
 	return 0
 
@@ -62,7 +62,7 @@ Search(){
 		
 	echo ""
 	echo "				    Press any key to return to the menu."
-	read -n 1 -s
+	read -n 1 -s		# Make the program wait for the user to press a key. 
 }
 
 List(){
